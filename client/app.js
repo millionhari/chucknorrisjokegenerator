@@ -1,6 +1,6 @@
-var app = angular.module('chuckMe', [
-  'chuckMe.services',
-  'chuckMe.joke',
+var app = angular.module('dadJokes', [
+  'dadJokes.services',
+  'dadJokes.joke',
   'ui.router'
   ])
 .config(function($stateProvider, $urlRouterProvider){
@@ -9,7 +9,12 @@ var app = angular.module('chuckMe', [
   $stateProvider
     .state('home',{
       url: "/",
-      templateUrl: "joke/joke.html",
+      templateUrl: "app/joke/joke.html",
+      controller: "SingleJokeCtrl as joke"
+    })
+    .state('submitjoke',{
+      url: "/submitjoke",
+      templateUrl: "app/joke/joke.html",
       controller: "SingleJokeCtrl as joke"
     });
 });

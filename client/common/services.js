@@ -1,6 +1,6 @@
-var chuckServices = angular.module('chuckMe.services', []);
+var dadJokes = angular.module('dadJokes.services', []);
 
-chuckServices.factory('Jokes', function($http){
+dadJokes.factory('Jokes', function($http){
   
   // Get Joke
   var getJoke = function(){
