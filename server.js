@@ -1,6 +1,7 @@
 var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
+var cors = require('cors');
 
 var mongoose = require('mongoose');
 var Joke = require('./models/jokes');
@@ -9,6 +10,9 @@ mongoose.connect('mongodb://localhost/chucknorrisjokes');
 
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
+app.use(cors());
+
+app.use(express.static(__dirname+'/index.html'));
 
 var port = process.env.PORT || 8080;
 
