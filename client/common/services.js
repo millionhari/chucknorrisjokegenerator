@@ -8,7 +8,7 @@ chuckServices.factory('Jokes', function($http){
       method: "GET",
       url: '/api/jokes'
     }).then(function(response){
-      return response;
+      return response.data;
     }).catch(function(error){
       console.error('getJoke error', error);
     });
