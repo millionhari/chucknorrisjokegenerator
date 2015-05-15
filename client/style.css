@@ -1,16 +1,35 @@
+body {
+  font-family: 'Droid Serif', serif;
+  color: white;
+
+}
+
+.dot-matrix {
+  background: url(http://s14.directupload.net/images/111129/44ga9qid.png);
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1
+}
+
 .jumbo-header {
   text-align: center;
   height: 100vh;
   margin: 0;
+  background-image: url('assets/chucknorrisbg1.jpg');
+  background-size: cover;
 }
 
 .single-joke {
   height: 200px;
-  width: 1000px;
+  width: 90%;
 }
 
 .page-wrapper {
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  position: relative;
+  z-index: 9999;
 }

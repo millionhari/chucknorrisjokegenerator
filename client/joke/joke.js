@@ -1,7 +1,9 @@
 angular.module('chuckMe.joke', [])
   .controller('SingleJokeCtrl', function(Jokes){
     var self = this;
-    self.singleJoke = "adsf";
+
+    // Initial Joke
+    self.singleJoke = "Chuck Norris.";
     var getRandomInt = function(min, max){
       return Math.floor(Math.random()*(max - min)) + min;
     };
