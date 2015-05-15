@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <title>Chuck Norris Jokes</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
   <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.15/angular.min.js"></script>
@@ -11,8 +12,8 @@
   <script src="app.js"></script>
 </head>
 <body ng-app="chuckMe">
-  <div class="jumbotron">
-    <div ui-view></div>
+  <div class="jumbotron jumbo-header">
+    <div class="page-wrapper" ui-view></div>
   </div>
   <script src="common/services.js"></script>
   <script src="joke/joke.js"></script>

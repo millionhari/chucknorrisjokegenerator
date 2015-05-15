@@ -1,7 +1,7 @@
 angular.module('chuckMe.joke', [])
   .controller('SingleJokeCtrl', function(Jokes){
     var self = this;
-
+    self.singleJoke = "adsf";
     var getRandomInt = function(min, max){
       return Math.floor(Math.random()*(max - min)) + min;
     };
@@ -9,7 +9,7 @@ angular.module('chuckMe.joke', [])
     self.displayJoke = function(){
         Jokes.getJoke()
         .then(function(response){
-          console.log(response[getRandomInt(0, response.length)].line);
+          self.singleJoke = response[getRandomInt(0, response.length)].line;
         });
     };
 });
